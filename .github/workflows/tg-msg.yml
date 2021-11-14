@@ -1,0 +1,22 @@
+name: tg-msg
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  send_msg:
+    name: Отправка сообщения в Telegram с информацией о коммите
+    runs-on: ubuntu-latest
+    steps:
+      - name: Отправка сообщения в Telegram
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_GROUP_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            📌 ${{ github.event.commits[0].message }}
+
+            [Link](https://vk.com)
