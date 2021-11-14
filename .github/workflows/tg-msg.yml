@@ -18,10 +18,11 @@ jobs:
           format: html
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            📌 <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>
+            &laquo;<a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>	&raquo;
+
+            #project #author #github #gh #github_workflow #ghwf #telegram #tg #tgbot
+
             👨‍💻 <a href="https://github.com/${{ github.actor }}">${{ github.actor }}</a> / telegram: @${{ github.actor }}
             🗂 <a href="https://github.com/${{ github.repository }}">${{ github.repository }}</a>
             #️⃣ <code>${{github.sha}}</code>
             🤖 ${{github.workflow}}
-
-            #gh #ghaction #rx1310 #tg #tgbot 
