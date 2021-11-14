@@ -18,15 +18,8 @@ jobs:
           format: html
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            📌 Новый коммиьт
-      - name: Отправка сообщения в Telegram
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_GROUP_ID }}
-          format: html
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: |
             📌 <b>Коммит:</b> <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>
             👨‍💻 <b>Автор коммита:</b> @${{ github.actor }}
             🗂 <b>Репозиторий</b>: ${{ github.repository }}
+            #️⃣ <b>SHA:</b> <code>${{github.sha}}</code>
 
