@@ -15,10 +15,11 @@ jobs:
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_GROUP_ID }}
-          format: markdown
+          format: html
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           photo: test/github.png
           document:  test/github.png
           message: |
+            🆕 <b>Новый коммит в репозитории 91muilak/${{ github.repository }}!</b>
             📌 **@${{ github.actor }} опубликовал новый [коммит](https://github.com/${{ github.repository }}/commit/${{github.sha}})!**
 
