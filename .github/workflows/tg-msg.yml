@@ -18,7 +18,7 @@ jobs:
           format: html
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            &laquo;<a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>	&raquo;
+            <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">&laquo;${{ github.event.commits[0].message }}&raquo;</a>	
 
             #project #author #github #gh #github_workflow #ghwf #telegram #tg #tgbot
 
