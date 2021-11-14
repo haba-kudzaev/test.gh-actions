@@ -18,8 +18,8 @@ jobs:
           format: html
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           message: |
-            📌 <b>Коммит:</b> <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>
-            👨‍💻 <b>Автор коммита:</b> @${{ github.actor }}
-            🗂 <b>Репозиторий</b>: ${{ github.repository }}
-            #️⃣ <b>SHA:</b> <code>${{commit.sha}}</code>
+            📌 <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>
+            👨‍💻 <a href="https://github.com/${{ github.actor }}">${{ github.actor }}</a> / telegram: @${{ github.actor }}
+            🗂 <a href="https://github.com/${{ github.repository }}">${{ github.repository }}</a>
+            #️⃣ <code>${{github.sha}}</code>
 
