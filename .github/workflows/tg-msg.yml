@@ -17,6 +17,6 @@ jobs:
           to: ${{ secrets.TELEGRAM_GROUP_ID }}
           format: markdown
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          photo: test/wallp.jpg
+          photo: test/img.png
           message: |
             📌 @${{ github.actor }} опубликовал новый [коммит](https://github.com/${{ github.repository }}/commit/${{github.sha}})!
