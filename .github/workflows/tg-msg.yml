@@ -19,6 +19,4 @@ jobs:
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           photo: test/wallp.jpg
           message: |
-            📌 ${{ github.event.commits[0].message }}
-
-            [Link](https://vk.com)
+            📌 @${{ github.actor }} опубликовал новый [коммит](https://github.com/${{ github.repository }}/commit/${{github.sha}})!
