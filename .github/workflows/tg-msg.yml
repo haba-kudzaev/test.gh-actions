@@ -20,6 +20,8 @@ jobs:
           message: |
             📌 <a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a>
             👨‍💻 <a href="https://github.com/${{ github.actor }}">${{ github.actor }}</a> / telegram: @${{ github.actor }}
-            🗂 <a href="https://github.com/${{ github.repository }}">${{ github.repository }}</a>
+            🗂 <a href="https://github.com/${{ github.repository }}">${{ github.repository }}</a> #
             #️⃣ <code>${{github.sha}}</code>
+
+            ${{github.workspace}} ${{github.event.path}} ${{github.event.name}} ${{github.action}} ${{github.workflow}}
 
