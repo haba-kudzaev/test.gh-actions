@@ -17,9 +17,9 @@ jobs:
           to: ${{ secrets.TELEGRAM_GROUP_ID }}
           format: html
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          photo: test/github.png
-          document:  test/github.png
           message: |
-            🆕 <b>Новый коммит в репозитории 91muilak/${{ github.repository }}!</b>
-            📌 **@${{ github.actor }} опубликовал новый [коммит](https://github.com/${{ github.repository }}/commit/${{github.sha}})!**
+            📌 <b><a href="https://github.com/${{ github.repository }}/commit/${{github.sha}}">${{ github.event.commits[0].message }}</a></b>
+            👨‍💻 @${{ github.actor }}
+            🗂 ${{ github.repository }}
+            ${{github.action}}
 
